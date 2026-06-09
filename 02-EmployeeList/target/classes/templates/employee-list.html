@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+<title>Spring MVC</title>
+</head>
+<body>
+<h3>List of Employees</h3>
+
+<table border = "1">
+	<tr>
+		<th>Employee Id</th>
+		<th>Employee Name</th>
+		<th>Employee Salary</th>
+	</tr>
+	<tr th:each="e : ${employeeList}">
+		<td th:text="${e.employeeId}"></td>
+		<td th:text="${e.name}"></td>
+		<td th:text="${e.salary}"></td>
+	</tr>
+</table>
+<br>
+<a href="addnew">Add New Employee</a>
+</body>
+</html>
